@@ -8,8 +8,12 @@ set(Sources
 
 add_executable(${This} ${Sources})
 
+target_link_libraries(${This}
+    gtest pthread
+)
+
 target_link_libraries(${This} PUBLIC
-    gtest_main
+    #gtest_main
     Example
 )
 
